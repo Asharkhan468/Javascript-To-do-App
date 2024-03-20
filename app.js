@@ -3,20 +3,23 @@ let todoInput=document.querySelector("#Todo");
 let ol=document.querySelector("ol");
 
 
+//Render Array
+
 function renderarray(){
 
     ol.innerHTML="";
 
 
-
-
     for(i=0 ; i<array.length ; i++){
-        ol.innerHTML+=`<li>${array[i]} <button onclick="deleteTodo(${i})">Delete</button> <button onclick="editTodo()>Edit</button></li>`;
+        ol.innerHTML+=`<li>${array[i]}  <i class="fa-solid fa-pen-to-square" onclick="editTodo(${i})"></i> <i class="fa-solid fa-delete-left" onclick="deleteTodo(${i})"></i>
+       </li>`;
     }
 
     
 
 }
+
+//Create Array and Add to TODO
 
 let array=[];
 
@@ -40,28 +43,38 @@ function addTodo(){
 }
 
 
+//Delete TODO
+
+
 
 function deleteTodo(index){
 
    
     array.splice(index , 1);
 
+    renderarray()
+
+
+
+
+}
+
+//Edit any TODO
+
+
+function editTodo(index){
+
+    let newValue=prompt("Enter a new value");
+
+    array.splice(index , 1 , newValue );
+
+
    renderarray()
 
 
 
-
-}
-
-
-function editTodo(){
-
-    let editedValue=prompt("Enter edited value");
-
-    array.push(editedValue);
-
-    renderarray()
-
+   
     
 
 }
+
