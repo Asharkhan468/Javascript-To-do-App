@@ -2,25 +2,33 @@ let todoInput=document.querySelector("#Todo");
 
 let ol=document.querySelector("ol");
 
+let array=[];
 
 function addTodo(){
- 
-    let arr=[];
 
-    arr.push(todoInput.value);
+
+    array.push(todoInput.value);
+
+    console.log(array);
 
     todoInput.value="";
 
-    for(i=0 ; i<arr.length ; i++){
 
-    ol.innerHTML=`<li>${arr[i]}</li>`
 
+    for(i=0 ; i<array.length ; i++){
+        ol.innerHTML+=`<li>${array[i]} <button onclick="deleteTodo()">Delete</button> <button>Edit</button></li>`;
     }
 
+    
+
+ 
+    
+}
 
 
+function deleteTodo(){
 
-
+    
 
 
 
