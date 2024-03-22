@@ -32,12 +32,12 @@ body {
     margin-left: 30px;
   }
 
-  .fa-trash{
-    color: #ff0000;
+  .fa-pen-to-square{
+    color: #0000ff;
   }
 
-  .fa-pen-to-square{
-    color: blue;
+  .fa-trash{
+    color: #ff0000;
   }
   
   .header {

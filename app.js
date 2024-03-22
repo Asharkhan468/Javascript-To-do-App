@@ -11,9 +11,12 @@ function renderarray(){
 
 
     for(i=0 ; i<array.length ; i++){
-        ol.innerHTML+=`<li>${array[i]}  <i class="fa-solid fa-pen-to-square" onclick="editTodo(${i})"></i> <i class="fa-solid fa-trash " onclick="deleteTodo(${i})"></i>
-       </li>`;
+        ol.innerHTML+=`<li><border>${array[i]}  <i class="fa-solid fa-pen-to-square" onclick="editTodo(${i})"></i> <i class="fa-solid fa-trash " onclick="deleteTodo(${i})"></i>
+       </li></border>`;
     }
+    
+
+
 
     
 
